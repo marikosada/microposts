@@ -22,7 +22,8 @@
         <%= link_to followers_user_path(@user) do %>Followers <span class="badge"><%= @count_followers %></span>
         <% end %></li>
       </ul>
-    <%= render 'microposts/microposts', microposts: @microposts %>
+    <%= render 'users', users: @followings %>
+    <!-- パーシャルusersのローカル変数usersに@followingsを代入することでフォローしている人を表示 -->
 
   </div>
 </div>
